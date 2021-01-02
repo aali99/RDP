@@ -63,8 +63,12 @@ sudo git clone https://github.com/hahwul/dalfox
 sudo cd dalfox
 sudo go install
 sudo go build
-
+sudo cd ~/
 sudo git clone https://github.com/chvancooten/BugBountyScanner
+cd ~/BugBountyScanner
+sudo wget https://raw.githubusercontent.com/aali99/BugBountyScanner/master/.env
+sudo rm -rf .env.example
+sudo echo "fitbit.com,elastifile.com,spokeo.com" >programs.txt
 ### Nuclei (Workaround -https://github.com/projectdiscovery/nuclei/issues/291)
 sudo cd "$toolsDir" || { echo "Something went wrong"; exit 1; }
 sudo git clone -q https://github.com/projectdiscovery/nuclei.git
